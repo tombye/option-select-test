@@ -1,1 +1,10 @@
-<h1>Hello</h1>
+<h2>Option select test</h2>
+
+<p>Test to see if the addition of the * class on-submit allows filters hidden by collapsed option-selects to be sent by the form when this is done without AJAX.</p>
+
+<form action="/" method="get">
+  <%= render partial: 'govuk_component/option_select', locals: @option_select_1_data %>
+  <%= render partial: 'govuk_component/option_select', locals: @option_select_2_data %>
+  <%= render partial: 'govuk_component/option_select', locals: @option_select_3_data %>
+<input type="submit" value="Search" />
+</form>
