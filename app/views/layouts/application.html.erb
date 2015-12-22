@@ -1,0 +1,31 @@
+<%# blocks for govuk_template %>
+<% content_for :header_class, 'with-proposition' %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag 'application' %>
+<% end %>
+<% content_for :proposition_header do %>
+  <div class="header-proposition">
+    <div class="content">
+      <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+      <nav id="proposition-menu">
+      <a href="/" id="proposition-name">Service Name <span class="beta-tag">beta</span></a>
+      <ul id="proposition-links">
+        <li><a href="url-to-page-1" class="active">Navigation item #1</a></li>
+        <li><a href="url-to-page-2">Navigation item #2</a></li>
+      </ul>
+      </nav>
+    </div>
+  </div>
+<% end %>
+<% content_for :content do %>
+  <div id="wrapper">
+    <%= yield %>
+  </div>
+<% end %>
+<% content_for :after_header do %>
+  <div class="beta-bar">
+    <p>This service is in <a href="#">beta</a></p>
+  </div>
+<% end %>
+<%# use the govuk_template layout %>
+<%= render :template => 'layouts/govuk_template' %>

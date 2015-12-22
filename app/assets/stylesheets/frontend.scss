@@ -1,0 +1,8 @@
+@import "design-patterns/alpha-beta";
+
+.beta-bar {
+  @include phase-banner($state: beta);
+}
+.beta-tag {
+  @include phase-tag($state: beta);
+}
